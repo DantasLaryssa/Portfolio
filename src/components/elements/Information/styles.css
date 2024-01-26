@@ -1,0 +1,31 @@
+.page2 {
+    background-color: #f5f5f5; 
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 > div {
+    height: 100%;
+}
+
+.page2 > div:first-child {
+    flex: 2;
+    display: flex;
+}
+.page2 > div:last-child {
+    flex: 3;
+}
+
+.page2 > div > img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.information-p {
+    max-width: 90%;
+    font-weight: 200;
+    text-align: justify;
+}
