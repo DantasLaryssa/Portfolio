@@ -21,7 +21,7 @@ const Page2 = () => {
       </div>
       <div>
         <p className="information-p">
-          Sou de São Paulo e utilizo a<strong> tecnologia </strong>de forma
+          Olá, me chamo Laryssa! Sou de São Paulo e utilizo a<strong> tecnologia </strong>de forma
           criativa! Em 2020 me formei em Design de moda e atualmente curso
           <strong> Ciência da Computação</strong>. 
           <br />

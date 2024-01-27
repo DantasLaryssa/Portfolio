@@ -17,15 +17,21 @@
 }
 .page2 > div:last-child {
     flex: 3;
+
 }
 
 .page2 > div > img {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
+    margin-top: -100px;
 }
 
 .information-p {
     max-width: 90%;
-    font-weight: 200;
+    font-weight: 300;
     text-align: justify;
+    margin-top: 45px;
+}
+.information-p>  b {
+    font-weight: 500;
 }

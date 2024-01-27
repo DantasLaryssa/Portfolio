@@ -3,7 +3,12 @@ import HTMLFlipBook from "react-pageflip";
 import "./styles.css";
 import CustomSwitch from "../../components/ui/CustomSwitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faBehanceSquare,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Cover from "../../components/elements/Cover";
 import Education from "../../components/elements/Education";
@@ -15,9 +20,51 @@ const Home = () => {
   const book = useRef();
 
   const [isSwitchOn, setIsSwitchOn] = useState(false);
+  const [bookPage, setBookPage] = useState(0);
 
   const handleTheme = () => {
     return `theme-${isSwitchOn ? "light" : "dark"}`;
+  };
+
+  const handleChangePage = (e) => {
+    setBookPage(e.data);
+  };
+
+  const handleButtons = () => {
+    switch (bookPage) {
+      case 2:
+        return <BtnsInfo />;
+
+      default:
+        return <></>;
+    }
+  };
+
+  const BtnsInfo = () => {
+    return (
+      <>
+        <FontAwesomeIcon
+          onClick={() => {window.open("https://www.behance.net/dantaslaryssa")}}
+          icon={faBehanceSquare}
+          color={isSwitchOn ? "#000" : "#f5f5f5"}
+        />
+        <FontAwesomeIcon
+          onClick={() => {window.open("https://github.com/DantasLaryssa")}}
+          icon={faGithub}
+          color={isSwitchOn ? "#000" : "#f5f5f5"}
+        />
+        <FontAwesomeIcon
+          onClick={() => {window.open("https://www.linkedin.com/in/dantaslaryssa/")}}
+          icon={faLinkedin}
+          color={isSwitchOn ? "#000" : "#f5f5f5"}
+        />
+        <FontAwesomeIcon
+          onClick={() => {window.open("mailto:dantaslaryssa@gmail.com")}}
+          icon={faEnvelope}
+          color={isSwitchOn ? "#000" : "#f5f5f5"}
+        />
+      </>
+    ); 
   };
 
   return (
@@ -35,7 +82,7 @@ const Home = () => {
           style={{ fontSize: 12 }}
         />
       </div>
-      <div className="book">
+      <div className="book" style={{ }}>
         <div className={`summary summary-${handleTheme()}`}>
           <p>CAPA</p>
           <p>INFORMAÇÕES</p>
@@ -49,8 +96,9 @@ const Home = () => {
           width={100}
           height={150}
           size="stretch"
-          style={{ marginTop: "-1vh" }}
+          style={{ marginTop: "-1vh", marginLeft: -20 }}
           id="htmlflipbook"
+          onFlip={handleChangePage}
         >
           <div className={`picverse ${handleTheme()}`} />
           <Cover />
@@ -60,6 +108,7 @@ const Home = () => {
           <Projects />
           <div className={`picverse ${handleTheme()}`} />
         </HTMLFlipBook>
+        <div className="buttons">{handleButtons()}</div>
       </div>
     </div>
   );
