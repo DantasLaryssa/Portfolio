@@ -22,15 +22,14 @@ const Cover = React.forwardRef((props, ref) => {
           </div>
 
           <div>
-            <p className="p2">DESENVOLVIDO por</p>
+            <p className="p2" style={{ color: "#afafaf" }}>DESENVOLVIDO por</p>
             <div>
-              <p className="title2" style={{ color: "#fff" }}>
-                LA
+              <p className="title2" style={{ color: "#afafaf" }}>
+                LARYSSA DANTAS VIEIRA
               </p>
-              <p className="title2">RYSSA DANTAS VIEIRA</p>
             </div>
-            <p className="p3">Desenvolvedora FRONT-END</p>
-            <p className="p3">& UX/UI Designer</p>
+            <p className="p3" style={{ color: "#afafaf" }}>Desenvolvedora FRONT-END</p>
+            <p className="p3" style={{ color: "#afafaf" }}>& UX/UI Designer</p>
           </div>
         </div>
       </div>
