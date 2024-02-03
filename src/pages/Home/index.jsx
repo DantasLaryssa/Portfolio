@@ -3,7 +3,12 @@ import HTMLFlipBook from "react-pageflip";
 import "./styles.css";
 import CustomSwitch from "../../components/ui/CustomSwitch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMoon,
+  faSun,
+  faEnvelope,
+  faFileArrowDown,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
   faBehanceSquare,
@@ -34,6 +39,22 @@ const Home = () => {
     switch (bookPage) {
       case 2:
         return <BtnsInfo />;
+      case 4:
+        return (        
+        <div  onClick={() => {
+          window.open("https://drive.usercontent.google.com/uc?id=13mnIER3dtaQANfb7yIGVyUp6D0WwWsqx&export=download");
+        }}>
+          <p className="download-cv" style={{color:isSwitchOn ? "#000" : "#f5f5f5"}}>
+            DOWNLOAD-CV
+          </p>
+          <FontAwesomeIcon 
+            icon={faFileArrowDown}
+            color={isSwitchOn ? "#000" : "#f5f5f5"}
+            
+            />
+            </div>
+          
+        );
 
       default:
         return <></>;
@@ -44,27 +65,35 @@ const Home = () => {
     return (
       <>
         <FontAwesomeIcon
-          onClick={() => {window.open("https://www.behance.net/dantaslaryssa")}}
+          onClick={() => {
+            window.open("https://www.behance.net/dantaslaryssa");
+          }}
           icon={faBehanceSquare}
           color={isSwitchOn ? "#000" : "#f5f5f5"}
         />
         <FontAwesomeIcon
-          onClick={() => {window.open("https://github.com/DantasLaryssa")}}
+          onClick={() => {
+            window.open("https://github.com/DantasLaryssa");
+          }}
           icon={faGithub}
           color={isSwitchOn ? "#000" : "#f5f5f5"}
         />
         <FontAwesomeIcon
-          onClick={() => {window.open("https://www.linkedin.com/in/dantaslaryssa/")}}
+          onClick={() => {
+            window.open("https://www.linkedin.com/in/dantaslaryssa/");
+          }}
           icon={faLinkedin}
           color={isSwitchOn ? "#000" : "#f5f5f5"}
         />
         <FontAwesomeIcon
-          onClick={() => {window.open("mailto:dantaslaryssa@gmail.com")}}
+          onClick={() => {
+            window.open("mailto:dantaslaryssa@gmail.com");
+          }}
           icon={faEnvelope}
           color={isSwitchOn ? "#000" : "#f5f5f5"}
         />
       </>
-    ); 
+    );
   };
 
   return (
@@ -82,7 +111,7 @@ const Home = () => {
           style={{ fontSize: 12 }}
         />
       </div>
-      <div className="book" style={{ }}>
+      <div className="book" style={{}}>
         <div className={`summary summary-${handleTheme()}`}>
           <p>CAPA</p>
           <p>INFORMAÇÕES</p>

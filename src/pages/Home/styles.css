@@ -84,6 +84,17 @@ p {
     transform: scale(1.25);
     cursor: pointer;
 }
+.download-cv {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;  
+    writing-mode: vertical-lr; 
+    /* transform: rotate(180deg);  */
+    gap: 30px; 
+    z-index: 500;
+    cursor: pointer;
+}
 
 .buttons {
     display: flex;
@@ -101,4 +112,9 @@ p {
 .buttons > *:hover { 
     transform: scale(1.25);
     cursor: pointer;
+}
+
+.pageborder {
+    border: 0.5px solid rgba(0,0,0,0.5);
+    box-sizing: border-box
 }

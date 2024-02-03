@@ -4,7 +4,7 @@ const PicPage = React.forwardRef((props, ref) => {
   return (
     <div ref={ref}>
       <div className="picverse">
-        <img src={props.img} alt="picverse" className="picverse"></img>
+        <img style={{objectFit:props.objectFit&&props.objectFit}} src={props.img} alt="picverse" className="picverse"></img>
       </div>
     </div>
   );
