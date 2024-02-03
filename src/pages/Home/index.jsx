@@ -40,20 +40,26 @@ const Home = () => {
       case 2:
         return <BtnsInfo />;
       case 4:
-        return (        
-        <div  onClick={() => {
-          window.open("https://drive.usercontent.google.com/uc?id=13mnIER3dtaQANfb7yIGVyUp6D0WwWsqx&export=download");
-        }}>
-          <p className="download-cv" style={{color:isSwitchOn ? "#000" : "#f5f5f5"}}>
-            DOWNLOAD-CV
-          </p>
-          <FontAwesomeIcon 
-            icon={faFileArrowDown}
-            color={isSwitchOn ? "#000" : "#f5f5f5"}
-            
+      case 6:
+        return (
+          <div
+            onClick={() => {
+              window.open(
+                "https://drive.usercontent.google.com/uc?id=13mnIER3dtaQANfb7yIGVyUp6D0WwWsqx&export=download"
+              );
+            }}
+          >
+            <p
+              className="download-cv"
+              style={{ color: isSwitchOn ? "#000" : "#f5f5f5" }}
+            >
+              DOWNLOAD-CV
+            </p>
+            <FontAwesomeIcon
+              icon={faFileArrowDown}
+              color={isSwitchOn ? "#000" : "#f5f5f5"}
             />
-            </div>
-          
+          </div>
         );
 
       default:
