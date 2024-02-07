@@ -20,6 +20,10 @@ import Education from "../../components/elements/Education";
 import Information from "../../components/elements/Information";
 import Projects from "../../components/elements/Projects";
 import Skills from "../../components/elements/Skills";
+import PicPage from "../../components/ui/PicPage";
+import back from"../../assets/back.png";
+
+
 
 const Home = () => {
   const book = useRef();
@@ -141,6 +145,7 @@ const Home = () => {
           <Skills />
           <Education />
           <Projects />
+          <PicPage img= {back}/>
           <div className={`picverse ${handleTheme()}`} />
         </HTMLFlipBook>
         <div className="buttons">{handleButtons()}</div>
