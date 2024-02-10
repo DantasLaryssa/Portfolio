@@ -2,6 +2,8 @@ import React from "react";
 import educationpic from "../../../assets/educationpic.png";
 import "./styles.css";
 import Shadow from "../../ui/Shadow";
+import texturemagazine from "../../../assets/texturemagazine.jpg";
+
 
 const Page1 = () => {
   return (
@@ -32,8 +34,8 @@ const Page2 = () => {
         <p>
           <b>Trilha Digital | Web Front-End.</b>
         </p>
-        <p>Bolsas Santander Coders 2023.2 |Front-End.</p>
-        <p>Concluído em 11/2023. (15 h).</p>
+        <p>Bolsas Santander Coders 2023.2 | Front-End.</p>
+        <p>Concluído em 11/2023. (15h).</p>
       </div>
       <div>
         <p>
@@ -52,10 +54,13 @@ const Education = React.forwardRef((props, ref) => {
       <div className="picverse pageborder" ref={ref}>
         <Shadow pageSide="left"/>
         <Page1 />
+        <img src={texturemagazine} alt="texture" className="texture2" />
+
       </div>
       <div className="picverse pageborder" ref={ref}>
         <Shadow pageSide="right"/>
         <Page2 />
+        <img src={texturemagazine} alt="texture" className="texture2" />
       </div>
     </>
   );

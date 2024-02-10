@@ -110,3 +110,13 @@
     /* justify-content: flex-end ; */
     flex-direction: column;
 }
+
+.texture {
+    width:100%; 
+    /* aspect-ratio: 3/4; */
+    height:100%;
+    position: absolute;
+    top: 0;
+    opacity: 6%;
+    
+}

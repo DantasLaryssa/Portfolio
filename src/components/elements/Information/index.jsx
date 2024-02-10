@@ -5,11 +5,13 @@ import picverse from "../../../assets/fotoverso.jpg";
 import infopic from "../../../assets/infopic.png";
 import "./styles.css";
 import Shadow from "../../ui/Shadow";
+import texturemagazine from "../../../assets/texturemagazine.jpg";
 
 const Page1 = () => {
   return (
     <div className="picverse">
       <PicPage img={picverse} />
+        <img src={texturemagazine} alt="texture" className="texture" />
     </div>
   );
 };
@@ -23,8 +25,8 @@ const Page2 = () => {
       <div>
         <p className="information-p">
           Olá, me chamo Laryssa! Sou de São Paulo e utilizo a
-          <strong> tecnologia </strong>de forma criativa! Em 2020 me formei em
-          Design de moda e atualmente curso
+          <strong> tecnologia </strong>de forma criativa! Me formei em 2020 em
+          Design de Moda e atualmente curso
           <strong> Ciência da Computação</strong>.
           <br />
           Desenvolvi esta
@@ -65,6 +67,7 @@ const Information = React.forwardRef((props, ref) => {
       <div className="picverse pageborder" ref={ref}>
         <Shadow pageSide="right"/>
         <Page2 />
+        <img src={texturemagazine} alt="texture" className="texture2" />
       </div>
     </>
   );

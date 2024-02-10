@@ -1,0 +1,8 @@
+import json
+
+with open("dados.json", "r") as f:
+    data = json.load(f)
+
+dia = data["dia"]
+
+print(dia)

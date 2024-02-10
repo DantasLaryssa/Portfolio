@@ -7,11 +7,10 @@
     gap: 15px;
     font-size:15px; 
     /* padding-left: 30px; */
-    padding-right: 100px;
 }
 
 .projectpic {
-    max-width: 90%;
+    max-width: 100%;
     font-weight: 300;
     text-align: justify;
     margin-top: 45px;
@@ -34,13 +33,53 @@
     flex-direction:column;
     justify-content:center;
     align-items:center; 
-    gap: 15px;
-    font-size:15px; 
-    padding-left: 100px;
-    /* padding-right: 100px; */
+    /* gap: 15px; */
+    font-size: 18px; 
+    padding-left: 40px;
+    padding-right: 40px;
     margin-top: 10px;
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 50px;
     text-align: justify;
 }
 
+.setimoandar {
+    width: 100%;
+    
+}
+
+.setimoandarvetor {
+    width: 100%;
+}
+
+
+.texto2 {
+    width: 70%;
+    font-size:15px; 
+    /* padding-left: 50px; */
+    margin-top: 60px;
+    /* margin-bottom: 50px; */
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vetor {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+.setimoandarpicture {
+    width: 100%;
+    margin-left: 10px;
+    /* margin-top: 150px; */
+    /* margin-bottom: 200px; */
+}
+.texto1 {
+    margin-top: 50px;
+    width: 70%;
+    font-size:15px; 
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+}

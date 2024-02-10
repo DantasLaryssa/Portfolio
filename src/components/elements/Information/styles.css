@@ -35,3 +35,23 @@
 .information-p>  b {
     font-weight: 500;
 }
+
+.texture {
+    width:100%; 
+    /* aspect-ratio: 3/4; */
+    height:100%;
+    position: absolute;
+    top: 0;
+    opacity: 9%;
+    
+}
+.texture2 {
+    width:100%; 
+    /* aspect-ratio: 3/4; */
+    height:100%;
+    position: absolute;
+    top: 0;
+    opacity: 20%;
+    
+    
+}

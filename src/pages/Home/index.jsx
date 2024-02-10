@@ -21,9 +21,8 @@ import Information from "../../components/elements/Information";
 import Projects from "../../components/elements/Projects";
 import Skills from "../../components/elements/Skills";
 import PicPage from "../../components/ui/PicPage";
-import back from"../../assets/back.png";
-
-
+import back from "../../assets/back.png";
+import texturemagazine from "../../assets/texturemagazine.jpg";
 
 const Home = () => {
   const book = useRef();
@@ -65,7 +64,24 @@ const Home = () => {
             />
           </div>
         );
-
+      case 10:
+        return (
+          <div
+            onClick={() => {
+              window.open(
+                "https://www.behance.net/gallery/189124079/APP-7-ANDAR-UXUI-DESING"
+              );
+            }}
+          >
+            <FontAwesomeIcon
+              icon={faBehanceSquare}
+              color={isSwitchOn ? "#000" : "#f5f5f5"}
+            />
+            <p style={{ fontSize: 15, color: isSwitchOn ? "#000" : "#f5f5f5" }}>
+              7ºA
+            </p>
+          </div>
+        );
       default:
         return <></>;
     }
@@ -123,11 +139,11 @@ const Home = () => {
       </div>
       <div className="book" style={{}}>
         <div className={`summary summary-${handleTheme()}`}>
-          <p>CAPA</p>
-          <p>INFORMAÇÕES</p>
-          <p>HABILIDADES</p>
-          <p>EDUCAÇÃO</p>
-          <p>PROJETOS</p>
+          <p onClick={() => book.current.pageFlip().flip(0)}>CAPA</p>
+          <p onClick={() => book.current.pageFlip().flip(2)}>INFORMAÇÕES</p>
+          <p onClick={() => book.current.pageFlip().flip(4)}>HABILIDADES</p>
+          <p onClick={() => book.current.pageFlip().flip(6)}>EDUCAÇÃO</p>
+          <p onClick={() => book.current.pageFlip().flip(8)}>PROJETOS</p>
         </div>
         <HTMLFlipBook
           ref={book}
@@ -145,7 +161,10 @@ const Home = () => {
           <Skills />
           <Education />
           <Projects />
-          <PicPage img= {back}/>
+          <PicPage img={back}>
+            {" "}
+            <img src={texturemagazine} alt="texture" className="texture" />
+          </PicPage>
           <div className={`picverse ${handleTheme()}`} />
         </HTMLFlipBook>
         <div className="buttons">{handleButtons()}</div>
